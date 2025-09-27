@@ -1,0 +1,31 @@
+import java.util.Scanner;
+    public class PalindromeCheck {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int num = sc.nextInt();
+
+        if (num > 99 && num < 1000) {
+            int reversed = 0;
+            int original = num;
+
+           
+            while (num != 0) {
+                int digit = num % 10;
+                reversed = reversed * 10 + digit;
+                num /= 10;
+            }
+
+            if (original == reversed) {
+                System.out.println("YES");
+            } else {
+                System.out.println("NO");
+            }
+        } else {
+            System.out.println("NO"); 
+        }
+
+        sc.close();
+    }
+}
+
+  
