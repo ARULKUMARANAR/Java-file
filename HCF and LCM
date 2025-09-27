@@ -1,0 +1,22 @@
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+      Scanner s=new Scanner(System.in);
+      int a=s.nextInt();
+      int b=s.nextInt();
+      int hcf=findHCF(a,b);
+      int lcm=(a==0||b==0)?0:(a*b)/hcf;
+      System.out.println(hcf);
+      System.out.println(lcm);
+      
+  }
+  public static int findHCF(int x,int y){
+    while(y!=0){
+      int temp=y;
+      y=x%y;
+      x=temp;
+    }
+    return x;
+  }
+}
